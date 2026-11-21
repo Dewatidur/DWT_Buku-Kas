@@ -1,0 +1,19 @@
+{
+  "name": "Buku Kas",
+  "short_name": "Buku Kas",
+  "description": "Catat uang masuk dan keluar, laporan harian, bulanan, tahunan, impor dan ekspor Excel.",
+  "lang": "id",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F1F4F0",
+  "theme_color": "#23467A",
+  "categories": ["finance", "business", "productivity"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

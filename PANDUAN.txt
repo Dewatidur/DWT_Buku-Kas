@@ -1,0 +1,41 @@
+PANDUAN: Buku Kas jadi aplikasi HP (PWA) - semuanya gratis
+
+ISI FOLDER (jangan ubah nama file/folder, upload semuanya):
+  index.html, sw.js, manifest.webmanifest, xlsx.full.min.js, icons/ (3 gambar)
+
+=== A. Taruh di internet (GitHub Pages, gratis) ===
+1. Daftar di github.com (gratis), lalu klik New repository.
+   Nama bebas, mis. "buku-kas", pilih Public, klik Create repository.
+2. Ekstrak ZIP ini di komputer. Di halaman repository klik "uploading an existing file".
+   Seret SEMUA isi folder (termasuk folder icons), lalu klik Commit changes.
+3. Buka Settings > Pages. Source: "Deploy from a branch", Branch: main, folder: / (root). Save.
+4. Tunggu 1-3 menit. Alamat aplikasi: https://NAMAUSER.github.io/buku-kas/
+   (alternatif: Netlify Drop / Cloudflare Pages, tinggal seret folder.)
+
+=== B. Pasang di HP tanpa APK ===
+1. Buka alamat tadi di Chrome Android.
+2. Menu titik tiga > "Instal aplikasi" / "Tambahkan ke layar utama".
+3. Ikon Buku Kas muncul di layar utama, bisa dipakai offline setelah dibuka sekali.
+   (iPhone: Safari > Bagikan > Tambah ke Layar Utama.)
+
+=== C. Jadi file APK (opsional) ===
+1. Buka pwabuilder.com, tempel alamat dari langkah A4, klik Start.
+2. Setelah skor PWA muncul, klik Package for stores > Android.
+3. Isi nama dan package ID (mis. com.namaanda.bukukas), biarkan opsi lain bawaan, Generate.
+4. Unduh hasilnya: ada file .apk (untuk dipasang langsung) dan .aab (untuk Play Store).
+   SIMPAN file signing key + passwordnya, wajib untuk update berikutnya.
+5. Kirim .apk ke HP, izinkan "pasang dari sumber tidak dikenal", lalu pasang.
+
+=== D. Play Store (opsional, berbayar sekali) ===
+- Akun Google Play Console: biaya pendaftaran sekali bayar sekitar US$25.
+- Siapkan: file .aab, ikon 512x512, screenshot HP, deskripsi, kebijakan privasi.
+- Akun pribadi baru biasanya wajib uji tertutup dulu beberapa minggu (cek aturan terbaru di Play Console).
+- Untuk TWA, upload file assetlinks.json dari PWABuilder ke folder .well-known di hosting
+  agar bilah alamat Chrome tidak muncul.
+
+=== MENGUPDATE APLIKASI ===
+Ganti index.html di GitHub, lalu naikkan VERSION di sw.js (mis. 'buku-kas-v2') supaya HP mengambil versi baru.
+
+=== PENTING ===
+- Data tersimpan di HP saja. Rutin pakai Pengaturan > Cadangkan data (file .json).
+- Menghapus aplikasi/data peramban = data hilang bila belum dicadangkan.
